@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/><!-- Google tag (gtag.js) -->
+<script>
+    $(document).ready(function () {
+        if (typeof Cookies.get('cookie') === 'undefined') {
+            Cookies.set('cookie', {
+                cookie: true,
+                preferences: true,
+                statistics: true,
+                marketing: true
+            });
+        }
+        if (Cookies.getJSON('cookie')['cookie'] == false) {
+            $('.cookie-container').hide();
+        }
+
+        $('.cookie-btn').click(function () {
+            let preferences = $('input[name="preferences"]').is(':checked'),
+                statistics = $('input[name="statistics"]').is(':checked'),
+                marketing = $('input[name="marketing"]').is(':checked');
+
+            Cookies.set('cookie', {
+                cookie: true,
+                preferences: preferences,
+                statistics: statistics,
+                marketing: marketing
+            });
+
+            $('.cookie-container').hide();
+            removeGACookies(statistics);
+        });
+
+        function removeGACookies(statistics) {
+            if (!statistics) {
+                Cookies.remove('_ga');
+                Cookies.remove('_gat');
+                Cookies.remove('_gid');
+                Cookies.remove('collect');
+            }
+        }
+
+        setTimeout(function () {
+            removeGACookies(Cookies.getJSON('cookie')['statistics']);
+        }, 3000);
+
+    })
+</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2ERXHBXWS0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2ERXHBXWS0');
+</script><!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(92950476, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<!-- /Yandex.Metrika counter -->
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- CSRF Token -->
+<meta content="Наша компания специализируется на чип-тюнинге двигателей грузовых автомобилей и других коммерческих автомобилей c для повышения мощности и топливной экономичности." name="description"/>
+<meta content="chip tuning, truck-chiptuningfiles, files, file, tune, software, quality, supplier" name="keywords"/>
+<meta content="CL Web" name="author"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/> <!-- IE compatible mode IE 7,8, -->
+<meta content="https://trucksformer.ru" property="og:url"/>
+<link href="_truckicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="_truckicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="_truckicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="_truckicons/manifest.json" rel="manifest"/>
+<link color="#5bbad5" href="_truckicons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="_truckicons/favicon.ico" rel="shortcut icon"/>
+<meta content="_truckicons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<!-- datalayer-->
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    dataLayer.push(
+        {
+            funnel_flags: {
+                authentication: {
+                    visited_login_form: 1,
+                    logged_in: 0,
+                    visited_registration_form: 1,
+                    registered: 0
+                },
+                credit_purchase: {
+                    visited_buy_credits_page: 0,
+                    added_credits_to_cart: 0,
+                    visited_credit_payment_Метод_page: 0,
+                    credit_purchase_complete: 0,
+                },
+                product_purchase: {
+                    visited_product_overview: 1,
+                    visited_product_page: 1,
+                    added_product_to_cart: 0,
+                    viewed_cart: 0,
+                    viewed_cart_step_2: 0,
+                    viewed_cart_step_3: 0,
+                    product_purchase_complete: 0,
+                },
+                newsletter: {
+                    subscribed_to_newsletter: 0,
+                }
+            }
+        }
+    )
+
+    
+    
+    </script>
+<!-- datalayer end-->
+<script src="js/home.js"></script>
+<title>Наша компания специализируется на чип-тюнинге двигателей грузовых и других коммерческих автомобилей для повышения мощности и топливной экономичности на дальних дистанциях. </title>
+<link href="https://trucksformer.ru/style1/extraStyle.min.css" rel="stylesheet" type="text/css"/>
+<style>.site-color-border {
+            border-color: #f8ae1a
+        }
+
+        .site-color-text {
+            color: #f8ae1a                       !important;
+        }
+
+        .btn-white:hover {
+            background-color: #f8ae1a;
+        }
+
+        a {
+            color: #f8ae1a;
+        }
+
+        a.active {
+            background-color: #f8ae1a;
+        }
+
+        .site-color {
+            background-color: #f8ae1a                       !important;
+        }
+
+        a.btn:hover {
+            background-color: #f8ae1a;
+            color: white;
+        }
+
+        .widget-content ul li {
+            list-style-image: url("_truck/ul_li.png");
+        }
+
+        .btn-danger {
+            background-color: #f8ae1a;
+            border-color: #f8ae1a;
+            color: #fff;
+        }
+
+        .icon-container, .head-item-content, .recent-update .recent, .widget, .navbar-toggle, .navbar-toggle .icon-bar, .navbar .active {
+            border-color: #f8ae1a;
+        }
+
+        .btn-primary:hover {
+            background-color: #f8ae1a;
+            border-color: #f8ae1a;
+        }
+
+        .header_1, .header_2, .header_3 {
+            background-image: url(_truck/thumb_3.jpg);
+        }
+
+        .start-img {
+        
+
+
+
+        }
+
+        .video:not(.noAfter):after, .project-video:not(.noAfter):after {
+            background-image: url("style1/play-button.png");
+        }
+
+        .steps > .title > .number {
+            color: #f8ae1a;
+        }
+
+        .help-image {
+            background-image: url("style1/contact1.png");
+        }
+        .site-color-shadow {
+            box-shadow: 0 3px 3px 3px #f8ae1a;
+        }
+        .site-color-border {
+            border-color: #f8ae1a !important;
+        }
+        .site-color-checkbox {
+            border-color: #f8ae1a !important;
+        }
+        .site-color-checkbox:checked {
+            background-color: #f8ae1a !important;
+        }
+        .home-pricelist-container .pricelist-credit-overview-holder .tuning-type-holder .tuning-type-title .type-title .type-checkbox input[type="checkbox"]:checked {
+            background-color: #f8ae1a
+
+
+        }
+
+        .home-pricelist-container .pricelist-credit-overview-holder .tuning-type-dropdown-holder .tuning-type-title .type-title .type-checkbox input[type="checkbox"]:checked {
+            background-color: #f8ae1a
+
+
+        }
+    </style>
+</head>
+<body>
+<div class="md-hidden mobile-nav-top site-color">
+<div class="row">
+<div class="col-3">
+<a class="mobile-top-nav-item" href="login.html">ВХОД</a>
+</div>
+<div class="col-3 green" id="register">
+<a class="" href="register.html">РЕГИСТРАЦИЯ</a>
+</div>
+<div class="col-6">
+<a class="" href="http://trucksformer.ru/chiptuning-files/trucks-tuningfiles/man.html">
+                КОРЗИНА ПОКУПОК
+                <i aria-hidden="true" class="fa fa-shopping-cart white-text"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="container-fluid menu-container" id="app" style="padding-left:0px;padding-right: 0px;">
+<div class="navbar-holder">
+<nav class="navbar navbar-expand-lg navbar-light bg-faded navbar-custom-style bg-transparent">
+<div class="container-fluid" style="position: relative">
+<div class="col-12 col-md-3">
+<a class="navbar-brand navbar-brand-mobile" href="index.html">
+<img class="logo img-fluid home-img" src="truck/logo-with.png"/>
+</a>
+</div>
+<button class="navbar-toggler site-color">
+<span class="navbar-toggler-icon"></span>
+<span class="mobile-menu-name">МЕНЮ</span>
+</button>
+<div class="mobile-nav-toggler site-color">
+<span class="navbar-toggler-icon"></span>
+</div>
+<div class="col-12 col-md-9">
+<div class="nav-bar-2" id="navbarSupportedContent2">
+<ul class="navbar-nav mr-auto" style="flex-direction: inherit; height: 50px;">
+<li class="xs-hidden nav-item login-item account-item">
+<a class="login-button btn btn-secondary btn-sm" href="login.html">ВХОД</a>
+</li>
+<li class="xs-hidden nav-item">
+<a class="btn btn-secondary btn-sm" href="chiptuning-news.html">НОВОСТИ</a>
+</li>
+<li class="xs-hidden nav-item contact-item account-item">
+<a class="btn btn-secondary btn-sm" href="contact.html">КОНТАКТЫ</a>
+</li>
+<li class="xs-hiddenavbar-brand-mobilen nav-item cart-item account-item">
+<a class="cart-button btn btn-secondary btn-sm" href="http://trucksformer.ru/chiptuning-files/trucks-tuningfiles/man.html">
+                                    КОРЗИНА <i aria-hidden="true" class="fa fa-shopping-cart"></i>
+</a>
+</li>
+<!--
+                                                                                                                                <div>
+                                <a class="land dropdown-item"
+                                   href="https://trucksformer.ru?currency=JPY"><span
+                                                            class='land-icon ¥'></span> <span
+                                                            class="land-text">¥ - JPY</span>
+                                                </a>
+                                            </div>
+                                                                    <div>
+                                <a class="land dropdown-item"
+                                   href="https://trucksformer.ru?currency=USD"><span
+                                                            class='land-icon $'></span> <span
+                                                            class="land-text">$ - USD</span>
+                                                </a>
+                                            </div>
+                                                                    <div>
+                                <a class="land dropdown-item"
+                                   href="https://trucksformer.ru?currency=HKD"><span
+                                                            class='land-icon HK$'></span> <span
+                                                            class="land-text">HK$ - HKD</span>
+                                                </a>
+                                            </div>
+                                                                    <div>
+                                <a class="land dropdown-item"
+                                   href="https://trucksformer.ru?currency=CAD"><span
+                                                            class='land-icon $'></span> <span
+                                                            class="land-text">$ - CAD</span>
+                                                </a>
+                                            </div>
+                                                                        </div>
+                            </div>
+                        </li>-->
+</ul>
+</div>
+<div class="collapse navbar-collapse nav-bar-1" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<div class="nav-item-content">
+<a class="nav-link btn-xs btn btn-danger" href="index.html">Главная</a>
+</div>
+</li>
+<li class="nav-item">
+<div class="nav-item-content">
+<a class="nav-link btn-xs btn" href="chiptuning-tools.html">ИНСТРУМЕНТЫ ЧИПТЮНИНГА</a>
+</div>
+</li>
+<li class="nav-item">
+<div class="nav-item-content">
+<a class="nav-link btn-xs btn" href="http://trucksformer.ru/chiptuning-files.html">ФАЙЛЫ ЧИПТЮНИНГА</a>
+</div>
+</li>
+<li class="nav-item">
+<div class="nav-item-content">
+<a class="nav-link btn-xs btn" href="pricelist.html"> Цены</a>
+</div>
+</li>
+<li class="nav-item">
+<div class="nav-item-content">
+<a class="nav-link btn-xs btn" href="winols.html"> WinOLS</a>
+</div>
+</li>
+<li class="nav-item">
+<div class="nav-item-content">
+<a class="nav-link btn-xs btn" href="api.html">API</a>
+</div>
+</li>
+<li class="nav-item account-item register-item">
+<div class="nav-item-content">
+<a class="nav-link btn-xs btn btn-success" href="register.html">РЕГИСТРАЦИЯ</a>
+</div>
+</li>
+<li class="nav-icon user-icon" style="display: none">
+<a class="icon-link" href="login.html">
+<i class="fa fa-user"></i>
+</a>
+</li>
+<li class="nav-icon cart-icon" style="display: none;">
+<a class="icon-link" href="http://trucksformer.ru/chiptuning-files/trucks-tuningfiles/man.html">
+<i class="fa fa-shopping-cart"></i>
+</a>
+</li>
+<!--<li class="nav-icon xs-hidden nav-item country-item account-item" style="display: none;">
+                                                                        
+                            <div>
+                                <a class="land dropdown-item"
+                                   href="https://trucksformer.ru?currency=JPY"><span
+                                                            class='land-icon ¥'></span> <span
+                                                            class="land-text"> ¥</span>
+                                                </a>
+                                            </div>
+                                        
+                            <div>
+                                <a class="land dropdown-item"
+                                   href="https://trucksformer.ru?currency=USD"><span
+                                                            class='land-icon $'></span> <span
+                                                            class="land-text"> $</span>
+                                                </a>
+                                            </div>
+                                        
+                            <div>
+                                <a class="land dropdown-item"
+                                   href="https://trucksformer.ru?currency=HKD"><span
+                                                            class='land-icon HK$'></span> <span
+                                                            class="land-text"> HK$</span>
+                                                </a>
+                                            </div>
+                                        
+                            <div>
+                                <a class="land dropdown-item"
+                                   href="https://trucksformer.ru?currency=CAD"><span
+                                                            class='land-icon $'></span> <span
+                                                            class="land-text"> $</span>
+                                                </a>
+                                            </div>
+                                                                        </div>
+                            </div>
+                        </li>
+-->
+<li class="nav-icon xs-hidden nav-item country-item account-item" style="display: none;">
+<div>
+<div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</div>
+<div class="start-img-holder">
+<div class="start-img home-img">
+<div class="tmp-img" id="tmp-img" style="position: relative; width: 100vw;  height:780px; ">
+<div class="d-block img-fluid static-slider-img home-img" style="background-image: url('truck/thumb_4.jpg');
+                             height:780px;
+                             width: 100vw;
+                                                  "></div>
+<div class="tmp-overlay" style=" position: absolute;
+                        top: 0;
+                        left: 0;
+                        right:0;
+                        bottom:0;
+                        display: block;
+                                        background-color: black;
+                        opacity: 0.4;
+                                "></div>
+</div>
+<div class="home-slider" style="width: 0;">
+</div>
+<!-- Remove CSS when the video is added. -->
+<div class="header-info home-info container" style="  text-align: center;  display: none">
+<div class="row">
+<div class="col-12">
+<h1 class="home-title">Онлайн Сервис Тюнинг файлов Для Грузовиков</h1>
+<p class="home-description">Мы поставляем изготовленные на заказ ECU Тюнинг файлов для тюнинга двигателей грузовиков и большегрузных автомобилей для большей мощности и топливной экономичности.</p>
+<div class="mobile-button">
+<div class="buttons">
+<div class="nav-item-content">
+<a class="login-button nav-link btn-xs btn btn-danger" href="login.html">ВХОД</a>
+</div>
+<div class="nav-item-content">
+<a class="nav-link btn-xs btn btn-success" href="register.html">РЕГИСТРАЦИЯ</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Uncomment when the video is added -->
+</div>
+</div>
+</div>
+<div class="blackOverlay homeOverlay">
+</div>
+</div>
+<script>
+    var slider = $('.home-slider'),
+        mobile = window.innerWidth < 500,
+        url = "home_slider",
+        switchType = mobile,
+        route = "home",
+        tmpImg = $('.tmp-img'),
+        loaded = 0,
+        routeName = 'home';
+    // console.log(route);
+    //
+    function infoHeight() {
+        var headerInfo = $('.header-info'),
+            height = $(window).height(),
+            searchHeight = $('.search-repeat').height(),
+            calculatedHeight = 0;
+
+        if (($(window).width() > 486) && ($(window).width() < 586)) {
+            calculatedHeight = 400;
+//$('h3').html($(window).width());
+        } else if (($(window).width() > 586) && ($(window).width() < 750)) {
+            calculatedHeight = 450;
+// $('h3').html($(window).width());
+        } else if (($(window).width() > 750) && ($(window).width() < 850)) {
+            calculatedHeight = 560;
+// $('h3').html($(window).width());
+        } else if ($(window).width() > 486) {
+            calculatedHeight = height - searchHeight;
+            if ($(window).width() < 996) {
+                calculatedHeight = calculatedHeight + searchHeight - 140;
+            }
+            if ($(window).height() > 1050) {
+                calculatedHeight = 600;
+            }
+            if ($(window).height() < 710) {
+                calculatedHeight = 600;
+            }
+        } else {
+            calculatedHeight = 350
+        }
+        if ($(window).width() < 996) {
+            if (loaded === 0) {
+                $(headerInfo).css('margin-top', -calculatedHeight - 730);
+                $(headerInfo).delay(1500).fadeIn(400);
+            } else {
+                $(headerInfo).css('margin-top', -calculatedHeight + 50);
+            }
+        } else {
+            if (routeName == 'home') {
+                if (loaded === 0) {
+                    $(headerInfo).css('margin-top', -calculatedHeight - 581);
+                    $(headerInfo).delay(1500).fadeIn(400);
+                } else {
+                    $(headerInfo).css('margin-top', -calculatedHeight + 200);
+                }
+            } else {
+                $(headerInfo).css('margin-top', 0);
+                $(headerInfo).css('display', 'block');
+            }
+        }
+
+    }
+
+
+    infoHeight();
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    $(document).ready(function () {
+        $(window).resize(function () {
+            homeSlider();
+            infoHeight();
+        });
+        homeSlider();
+    });
+
+
+    function homeSlider() {
+        mobile = window.innerWidth < 500;
+
+        if (mobile === switchType) {
+            switchType = !switchType;
+            posting = $.post(url, {
+                mobile: mobile
+            });
+            posting.done(function (data) {
+
+                slider.html(data);
+
+            });
+
+        }
+
+        if (mobile === false) {
+            $('#carouselControls').carousel();
+            $('.carousel').on('slide.bs.carousel', function () {
+                $(this).carousel('pause');
+                slider.css('width', '100vw');
+                $(tmpImg).css('display', 'none');
+                $(this).carousel('cycle');
+                infoHeight();
+            });
+            $('.carousel').on('slide.bs.carousel', function () {
+                loaded = 1;
+                infoHeight();
+            });
+        } else {
+
+            if ($(window).width() >= 488) {
+                $('.header-info').css('margin-top', -730);
+            } else if ($(window).width() < 488) {
+                $('.header-info').css('margin-top', -350 - 730);
+            } else if ($(window).width() < 486) {
+                $('.header-info').css('margin-top', -350 - 730);
+            }
+
+        }
+
+    }
+</script>
+<div class="container" style="padding-top:0px;">
+<div class="clear"></div>
+<!-- Main component for a primary error messages -->
+</div>
+<div class="container-fluid site-color search-repeat">
+<style>@media  screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        .search .search-car .col-md-5ths {
+            flex: 0 0 18%;
+        }
+    }
+
+</style>
+<div class="container search who">
+<!-- <form Метод="POST" action="chiptuning-files.html" accept-charset="UTF-8" class="search-car row"><input name="_token" type="hidden" value="iURc4EUHWCvvAULWvu0a1QUY8KQW5pMFcKsbmYdC"> -->
+<div class="col-sm-12">
+<h3 class="main-select search-title">Вы можете просмотреть все наши спецификации файла настройки онлайн:</h3>
+</div>
+<div class="selectContainter form-group col-md-5ths col-12">
+<div class="input-group">
+<select class="form-control" id="inputSucces" name="type_id"><option selected="selected" value="">Тип</option><option value="1">Грузовик</option></select>
+</div>
+</div>
+<div class="selectContainter form-group col-md-5ths col-12">
+<div class="input-group">
+<select class="form-control" id="inputSuccesMerk" name="merk_id"><option selected="selected" value="">Марка</option></select>
+</div>
+</div>
+<div class="col-xs-12 hidden-sm hidden-md hidden-lg" style="height:10px;"></div>
+<div class="selectContainter form-group col-md-5ths col-12">
+<div class="input-group">
+<select class="form-control" id="inputSuccesModel" name="model_id"><option selected="selected" value="">Модель</option></select>
+</div>
+</div>
+<div class="selectContainter form-group col-md-5ths col-xs-6 hidden" id="generationSelectContainer">
+<div class="input-group">
+<select class="form-control" id="inputSuccesGeneration" name="generation_id"><option selected="selected" value="">Generation</option></select>
+</div>
+</div>
+<div class="col-xs-12 hidden-sm hidden-md hidden-lg" style="height:10px;"></div>
+<div class="selectContainter form-group col-md-5ths col-12">
+<div class="input-group" style="width:100%;">
+<select class="form-control" id="inputSuccesMotor" name="motor_id"><option selected="selected" value="">Двигатель</option></select>
+</div>
+</div>
+<div class="col-xs-12 hidden-sm hidden-md hidden-lg" style="height:10px;"></div>
+<div class="selectContainter form-group col-md-5ths col-12">
+<div class="input-group" style="width:100%;">
+<!-- <a style="width: 100%;" type="submit" href="#" target="_blank"
+                   onclick="ga('send', 'event', 'home', 'button-search');"> -->
+<button class="btn btn-danger search-submit" style="width:100%;margin-top: 0px; border: 1px white solid;" type="submit">
+                        Search
+                        <span class="glyphicon glyphicon-search"></span>
+</button>
+<!-- </a> -->
+</div>
+</div>
+<div class="show_more">
+<div class="show_more_button"></div>
+</div>
+</div>
+<script type="text/javascript">
+
+    let urlMerk = "chiptuning-files/merk",
+        urlModel = "chiptuning-files/model",
+        urlModelMotor = "chiptuning-files/model_motor",
+        urlGeneration = "chiptuning-files/generation";
+    // select type
+    $("#inputSucces").change(function () {
+        let id = $("#inputSucces").val();
+        if (id != '') {
+            posting = $.post(urlMerk, {type_id: id});
+            posting.done(function (data) {
+                $("#inputSuccesMerk").html(data).fadeIn('slow');
+            });
+        }
+    });
+
+    function replaceAll(str, find, replace) {
+        return str.replace(new RegExp(find, 'g'), replace);
+    }
+
+    //select merk
+    $("#inputSuccesMerk").change(function () {
+        let id = $("#inputSuccesMerk").val(),
+            text = $("#inputSuccesMerk option[value='" + id + "']").text();
+        if (id != '') {
+            posting = $.post(urlModel, {merk_id: id});
+            posting.done(function (data) {
+                // console.log(data);
+                data = replaceAll(data, text, '');
+                console.log(data);
+                $("#inputSuccesModel").html(data.replace(text, '')).fadeIn('slow');
+            });
+        }
+    });
+    // Модель
+    $("#inputSuccesModel").change(function () {
+        let id = $("#inputSuccesModel").val();
+
+        if (id != '') {
+            let posting = $.post(urlModelMotor, {model_id: id});
+            posting.done(function (data) {
+                if (!data.hasGenerations) {
+                    hideGenerationSelect();
+                    let text1 = $('#inputSuccesMerk option:selected').text(),
+                     text2 = $('#inputSuccesModel option:selected').text();
+                    data = replaceAll(data.motor, text1, '');
+                    data = replaceAll(data, text2, '');
+                    $("#inputSuccesMotor").html(data).fadeIn('slow');
+                } else {
+                    showGenerationSelect();
+                    $("#inputSuccesGeneration").html(data.generations).fadeIn('slow');
+                }
+            });
+        }
+    });
+    $("#inputSuccesGeneration").change(function () {
+        let id = $("#inputSuccesGeneration").val();
+        if (id != '') {
+            let posting = $.post(urlGeneration, {generation_id: id});
+            posting.done(function (data) {
+                let text1 = $('#inputSuccesMerk option:selected').text(),
+                    text2 = $('#inputSuccesModel option:selected').text();
+                data = replaceAll(data, text1, '');
+                data = replaceAll(data, text2, '');
+                $("#inputSuccesMotor").html(data).fadeIn('slow');
+            });
+        }
+    });
+
+    function showGenerationSelect() {
+        $("#generationSelectContainer").removeClass('hidden');
+        $(".selectContainter").removeClass('col-md-5ths').addClass('col-md-2');
+    }
+
+    function hideGenerationSelect() {
+        $("#generationSelectContainer").addClass('hidden');
+        $(".selectContainter").addClass('col-md-5ths').removeClass('col-md-2');
+    }
+
+    $('.show_more').click(function () {
+        $('html, body').animate({
+            scrollTop: $(".show_more").offset().top - 100
+        }, 200);
+    });
+</script> </div>
+<!-- steps 1,2,3,4 -->
+<div class="container-fluid step-container grey">
+<div class="container row mx-auto step-container-height">
+<div class="col-md-12">
+<h2>
+<span class="site-color-text">Онлайн чиптюнинг</span>
+                    в
+                    <span class="site-color-text">4</span>
+                    простых
+                    <span class="site-color-text">шага</span>
+</h2>
+<h3 class="center-text explanation mobile-hidden">
+                    Мы поставляем изготовленные на заказ ECU Тюнинг файлов для тюнинга двигателей грузовиков и большегрузных автомобилей для большей мощности и топливной экономичности.</h3>
+<br/>
+</div>
+<div class="col-md-3">
+<div class="steps">
+<div class="title">
+<div class="number">01</div>
+                        Регистрация
+                    </div>
+                    Создать аккаунт
+                    <div style="clear: both;"></div>
+</div>
+</div>
+<div class="col-md-3 steps-containers">
+<div class="steps">
+<div class="title">
+<div class="number">02</div>
+                        Пополнить баланс
+                    </div>
+                    Пополнить баланс через Paypal
+                </div>
+</div>
+<div class="col-md-3 steps-containers">
+<div class="steps">
+<div class="title">
+<div class="number">03</div>
+                        Загрузить файл
+                    </div>
+                    Загрузите ваш файл
+                </div>
+</div>
+<div class="col-md-3 steps-containers">
+<div class="steps">
+<div class="title">
+<div class="number">04</div>
+                        Скачать файл
+                    </div>
+                    Скачайте ваш файл
+                </div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="car-animation-holder clearfix row" style="height:390px;">
+<!-- contact and 2 cars -->
+<div class="col-6 float-left two-vehicles-center-text">
+<div class="vehicle-image pull-left" style="background-image: url('_truck/vehicle.png')"></div>
+<div class="right">
+<div class="absolute">
+<div class="custom-center center">
+<div class="help-image">
+</div>
+                            Остались вопросы?<br/>
+<span class="site-color-text email-address"><span>Напишите Нам</span></span></a><br>
+<span class="site-color-text email-address"><span>info@trucksformer.ru</span></span></a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-6 float-left" style="overflow:hidden;">
+<div class="vehicle-image pull-right" style="background-image: url('_truck/vehicle.png')"></div>
+</div>
+</div>
+<div class="car-animation-holder-mobile">
+<div class="custom-center center">
+<div class="help-image">
+</div>
+                Есть вопросы?<br/>
+<span>info@trucksformer.ru</span></span></a>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="step-container recent-container">
+<div class="container mx-auto">
+<div class="col-md-12">
+<h2>
+               Наши                 <span class="site-color-text">
+                    Работы                </span>
+</h2>
+<h3 class="center-text explanation">
+                Эти Файлы Недавно Заказаны
+            </h3>
+<br/>
+</div>
+<div class="row recent-update">
+<div class="col-sm-4">
+<div class="recent">
+<b>Тюнинг Грузовиков</b>
+<br/>
+
+                            Iveco -
+
+                            <a href="http://trucksformer.ru/chiptuning-files/iveco/stralis/stralis-s56-560-pk-412-kw-euro-4-5">Stralis S56 (560 PK/412 kW) euro 4+</a><br/>
+
+                            Доставлено
+                                                            23-03-2023
+                                                    </div>
+</div>
+<div class="col-sm-4">
+<div class="recent">
+<b>ЭКО Тюнинг</b>
+<br/>
+
+                            Cummins -
+
+                            <a href="http://trucksformer.ru/chiptuning-files/cummins/isx-450/isx-450-14-95-2108-nm-without-egr-450hp-">ISX 450 14.95 2108 NM WITHOUT EGR</a><br/>
+
+                            Доставлено
+                                                            23-03-2023
+                                                    </div>
+</div>
+<div class="col-sm-4">
+<div class="recent">
+<b>Конфигурация Грузовика</b>
+<br/>
+
+                            Detroit Diesel -
+
+                            <a href="http://trucksformer.ru/chiptuning-files/detroit-diesel/dd13/dd13-12-8-471hp">DD13 12.8 471HP</a><br/>
+
+                            Доставлено
+                                                            23-03-2023
+                                                    </div>
+</div>
+<div class="col-sm-4 d-none d-sm-block">
+<div class="recent">
+<b>Конфигурация Грузовика</b>
+<br/>
+
+                            Caterpillar -
+
+                            <a href="http://trucksformer.ru/chiptuning-files/caterpillar/3126-b/caterpillar-3126-b-7-2-193hp-">CATERPILLAR 3126 B 7.2 193HP </a><br/>
+
+                            Доставлено
+                                                            23-03-2023
+                                                    </div>
+</div>
+<div class="col-sm-4 d-none d-sm-block">
+<div class="recent">
+<b>ЭКО Тюнинг</b>
+<br/>
+
+                            Mercedes -
+
+                            <a href="http://trucksformer.ru/chiptuning-files/mercedes/arocs/euro-vi">EURO VI</a><br/>
+
+                            Доставлено
+                                                            23-03-2023
+                                                    </div>
+</div>
+<div class="col-sm-4 d-none d-sm-block">
+<div class="recent">
+<b>Конфигурация Грузовика</b>
+<br/>
+
+                            Iveco -
+
+                            <a href="http://trucksformer.ru/chiptuning-files/iveco/iveco-stralis/iveco-stralis-500hp">Iveco  Stralis 500hp</a><br/>
+
+                            Доставлено
+                                                            23-03-2023
+                                                    </div>
+</div>
+<div class="col-sm-4 d-none d-sm-block">
+<div class="recent">
+<b>Тюнинг Грузовиков</b>
+<br/>
+
+                            Detroit Diesel -
+
+                            <a href="http://trucksformer.ru/chiptuning-files/detroit-diesel/series-60-445-ddec-iv/series-60-445-ddec-iv-12-7-445hp">SERIES 60-445 DDEC IV 12.7</a><br/>
+
+                            Доставлено
+                                                            23-03-2023
+                                                    </div>
+</div>
+<div class="col-sm-4 d-none d-sm-block">
+<div class="recent">
+<b>Тюнинг Грузовиков</b>
+<br/>
+
+                            Caterpillar -
+
+                            <a href="http://trucksformer.ru/chiptuning-files/caterpillar/c13-ohe/caterpillar-c13-ohe-12-5-epa04-acert-476hp">CATERPILLAR C13 OHE 12.5 EPA0</a><br/>
+
+                            Доставлено
+                                                            23-03-2023
+                                                    </div>
+</div>
+<div class="col-sm-4 d-none d-sm-block">
+<div class="recent">
+<b>Конфигурация Грузовика</b>
+<br/>
+
+                            Volvo Trucks -
+
+                            <a href="http://trucksformer.ru/chiptuning-files/volvo-trucks/volvo-trucks-fm/volvo-trucks-fm-13-480hp">Volvo Trucks FM 13 480hp</a><br/>
+
+                            Доставлено
+                                                            23-03-2023
+                                                    </div>
+</div>
+<div class="clear" style="height:45px;"></div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="container-fluid site-color">
+<div class="register-container container">
+<h2>Будь <b>в курсе!</b></h2>
+<span>
+	Получайте последние обновления, акции, новые предложения.
+	</span>
+<form accept-charset="UTF-8" action="subscribe/news/email" class="form-inline news-register-form row" метод="POST"><input name="_token" type="hidden" value="iURc4EUHWCvvAULWvu0a1QUY8KQW5pMFcKsbmYdC"/>
+<div class="col-md-3">
+<label class="sr-only" for="inlineFormInput">Name</label>
+<input class="form-control" name="name" placeholder="Ваше имя **" style="width:100%;margin-top:5px;" type="text"/>
+</div>
+<div class="col-md-3">
+<label class="sr-only" for="inlineFormInput">Email address</label>
+<input class="form-control" name="email" placeholder="Ваше email *" style="width:100%;margin-top:5px;" type="text"/>
+</div>
+<div class="col-md-3">
+<input class="btn btn-secondary" style="width:100%;margin-top:5px;" type="submit" value="РЕГИСТРАЦИЯ"/>
+</div>
+</form>
+</div> </div>
+<div class="why-container">
+<div class="container mx-auto">
+<div class="row why-margin">
+<div class="mobile-hidden col-12 col-lg-6 why-chip">
+<img alt="Custom-made ChipТюнинг файлы для " class="img-fluid" src="_truck/why-car.png"/>
+</div>
+<div class="col-12 col-lg-6 why-chip">
+<h2>Зачем<span class="site-color-text"><br class="md-hidden"/><strong>Нужны Файлы Для Чиптюнинга?</strong></span>
+</h2>
+<h4>Индивидуальные файлы для чиптюнинга</h4>
+<div class="desktop-hidden col-md-12">
+<img alt="Индивидуальные файлы для чиптюнинга" class="img-fluid" src="_truck/why-car.png"/>
+</div>
+
+                Наша компания специализируется на чип-тюнинге двигателей грузовых и других коммерческих автомобилей для повышения мощности и топливной экономичности на дальних дистанциях
+                <div class="clearfix"></div>
+<a href="pages/about"><button class="btn btn-danger btn-sm">Читать далее</button></a>
+</div>
+</div>
+<div class="mobile-border">
+</div>
+<div class="row why-margin">
+<div class="col-12 col-lg-6 why-chip">
+<h2>Чтение и письмо <span class="site-color-text"><strong>Инструменты</strong></span>
+</h2>
+<h4>Инструменты чиптюнинга</h4>
+<div class="desktop-hidden col-md-12">
+<img alt="Chiptuning tools" class="img-fluid" src="_truck/why-chiptuning.png"/>
+</div>
+
+                У нас есть все необходимые инструменты и программное обеспечение, необходимые для самостоятельной перенастройки двигателя, независимо от того, есть ли у вас автомобиль, фургон, грузовик или трактор. Мы являемся дистрибьютором Alientech, DIMsport и CMD и поддерживаем многие другие известные инструменты и программное обеспечение для чип-тюнинга.
+                <div class="clearfix"></div>
+<a href="pages/homepage_midden"><button class="btn btn-danger btn-sm">Читать далее</button></a>
+</div>
+<div class="mobile-hidden col-12 col-lg-6 why-chip">
+<img alt="Chiptuning tools" class="img-fluid" src="_truck/why-chiptuning.png"/>
+</div>
+</div>
+<div class="mobile-border">
+</div>
+<div class="row why-margin">
+<div class="mobile-hidden col-12 col-lg-6 why-chip">
+<img alt="Chiptuning equipment" class="img-fluid" src="_truck/why-testbank.png"/>
+</div>
+<div class="col-12 col-lg-6 why-chip">
+<h2>Собственный <span class="site-color-text"><strong>Измерительный стенд</strong></span>
+</h2>
+<div class="desktop-hidden col-md-12">
+<h4>Инструменты для чиптюнинга</h4>
+<img alt="Chiptuning equipment" class="noiOS img-fluid" src="_truck/why-testbank.png"/>
+</div>
+
+                Наша компания специализируется на чип-тюнинге двигателей грузовых и других коммерческих автомобилей для повышения мощности и топливной экономичности на дальних дистанциях<br/>
+<div class="clearfix"></div>
+<a href="pages/testbench"><button class="btn btn-danger btn-sm">Читать далее</button></a>
+</div>
+</div>
+</div>
+</div>
+<script src="js/menu.js"></script>
+<script type="text/javascript">
+    var changingColors = false;
+    var smallScreen = false;
+    $(document).ready(function () {
+        $('#alert-success').modal();
+        $('#alert-error').modal();
+        $('#alert-errors').modal();
+    });
+
+    $(document).on('click', function (e) {
+        var $target = e.target;
+
+        if ($($target).hasClass('fa-plus') || $($target).hasClass('fa-minus')) {
+            var attr = $($target).attr('data-cat'),
+                $ul = $('.' + attr);
+
+            $($target).toggleClass('fa-plus');
+            $($target).toggleClass('fa-minus');
+
+        }
+
+        if ($($target).hasClass('expand-news-text')) {
+            var index = $($target).attr('data-index'),
+                news = $("#news-" + index);
+            news.find('.unlimited-news').show();
+            news.find('.limited-news').hide();
+            news.find('.expand-news-text').hide();
+        }
+    });
+
+    if ($(window).width() < 992) {
+        smallScreen = true;
+    }
+
+    $(window).resize(function () {
+        if ($(window).width() < 992) {
+            smallScreen = true;
+            makeNavWhite();
+            changingColors = true;
+        } else {
+            smallScreen = false;
+            makeNavTrans();
+            changingColors = true;
+        }
+        doMenuAnimation();
+        doCenterContact();
+    });
+
+    $(window).scroll(function () { // main menu
+        doMenuAnimation();
+    });
+
+    function doMenuAnimation() {
+        var a = $(".start-img").height() - $('.navbar').height();
+        var pos = $(window).scrollTop();
+        if (pos > a || smallScreen) {
+            makeNavWhite();
+            hideTopBar();
+            changingColors = true;
+        } else {
+            showTopBar();
+            makeNavTrans();
+            changingColors = true;
+        }
+    }
+
+    function doCenterContact() {
+        var w = $('.container').width();
+        $('.custom-center').css('width', w).css('left', (w / 2) * -1);
+    }
+
+    function fadeInColor(elementIdentifier, color, callback) {
+        if (changingColors) return;
+        $(elementIdentifier).animate({backgroundColor: color}, 10, null, function () {
+            callback();
+            changingColors = false;
+        });
+    }
+
+    function hideTopBar() {
+        $('#navbarSupportedContent2').hide();
+        $('.nav-icon').show();
+        $('#navbarSupportedContent').find('.navbar-nav').css('border-top', 'none');
+    }
+
+    function showTopBar() {
+        $('#navbarSupportedContent2').show();
+        $('.nav-icon').hide();
+        $('#navbarSupportedContent').find('.navbar-nav').css('border-top', '1px solid rgba(255,256,255,.3)');
+    }
+
+    function makeNavWhite() {
+        fadeInColor(".navbar", '#fff', function () {
+            $(".navbar").addClass("bg-white").removeClass("bg-transparent");
+            $(".nav-item > a").css("color", "black");
+                        $(".logo").attr("src", "_truck/logo-black.png");
+                        $(".nav-icon.cart-icon").css("display","block");
+            $(".nav-icon.user-icon").css("display","block");
+            $(".nav-icon.country-item").css("display","block");
+        });
+    }
+
+    function makeNavTrans() {
+        fadeInColor(".navbar", 'transparent', function () {
+            $(".navbar").addClass("bg-transparent").removeClass("bg-white");
+            $(".nav-item > a").css("color", "white");
+                        $(".logo").attr("src", "_truck/logo-with.png");
+                        $(".nav-icon.cart-icon").css("display","none");
+            $(".nav-icon.user-icon").css("display","none");
+            $(".nav-icon.country-item").css("display","none");
+        });
+    }
+
+    $('.nav-icon').click(function () {
+        if ($(this).hasClass('first-icon')) {
+            $('.login-button').click();
+        }
+        else if ($(this).hasClass('cart-icon')) {
+            console.log($('.cart-button'));
+            $('.cart-button').click();
+        }
+    });
+
+    $('.datepicker').datepicker({
+        format: 'dd-mm-yyyy'
+    });
+
+    function iOS() {
+        if (/iP(hone|od|ad)/.test(navigator.platform)) {
+            return true;
+        }
+    }
+
+    $(document).ready(function () {
+
+        if (iOS()) {
+            $('.video').addClass('noAfter');
+            $('.project-video').addClass('noAfter');
+            $('.noiOS').hide();
+            $('.iOSOnly').show();
+        }
+        else {
+            $('.iOSOnly').remove();
+        }
+    });
+    $(window).on('click', function (e) {
+        var $target = e.target;
+
+        if ($($target).is('#next')) {
+            $('.bx-next').click();
+        }
+    });
+
+</script>
+            <script>
+        // $(document).ready(function () {
+        let stepContainer = $('.step-container-height');
+        $(stepContainer).find('.col-md-3').each(function (i, val) {
+            // console.log($(val).height());
+            $(val).height($(val).height());
+        });
+        let carContainer = $('.car-animation-holder');
+        $(carContainer).find('.col-6').each(function (i, val) {
+            // console.log($(val).height());
+            $(val).find('.vehicle-image').height($(val).height());
+        });
+        // })
+    </script>
+    <script>
+        var mySlider;
+        showCarousel();
+
+        $(window).on("resize load", function () {
+            showCarousel();
+        });
+        window.addEventListener("orientationchange", function () {
+            showCarousel();
+        }, false);
+
+        function showCarousel() {
+            if ($(window).width() < 576) {
+                $("#credit-bundels-slide").show();
+                $('#next').show();
+                $('#credit-bundels').hide();
+                if (mySlider == null) {
+                    mySlider = $("#credit-bundels-slide").bxSlider({
+                        auto: false,
+                        pager: false,
+                        touchEnabled: true,
+                        nextSelector: '#next',
+                        nextText: ''
+                    });
+                } else {
+                    mySlider.reloadSlider();
+                }
+                $(".offer-box").css("max-width", "450");
+            }
+            else if (mySlider != null) {
+                $('.bx-wrapper').hide();
+                $('#next').hide();
+                $('#credit-bundels').show();
+            }
+            else {
+                $('#credit-bundels-slide').hide();
+                $('#next').hide();
+                $('#credit-bundels').show();
+            }
+        }
+
+        $('#next').click(function(){
+            mySlider.goToNextSlide();
+            return false;
+        });
+    </script>
+    <script type="text/javascript">
+        let button = $('.show_more_button'),
+            scale = 1;
+        setInterval(function () {
+
+            $(button).css('transform', 'scale(' + scale + ')');
+            if (scale === 1) {
+                scale = 1.4;
+            }
+            else {
+                scale = 1;
+            }
+        }, 1000);
+    </script>
+<script>
+    $(document).ready(function () {
+        setTimeout(
+            function()
+            {
+                window.dispatchEvent(new Event('resize'));
+            }, 1000);
+
+    })
+</script>
+</body></html>
